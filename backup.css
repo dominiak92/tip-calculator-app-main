@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+colors {
+    color: hsl(183, 100%, 15%);
+    color: hsl(186, 14%, 43%);
+    color: hsl(184, 14%, 56%);
+    color: hsl(185, 41%, 84%);
+    color: hsl(189, 41%, 97%);
+    color: hsl(0, 0%, 100%);
+    color: hsl(172, 67%, 45%)
+}
+body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    background-color: #c5e4e7;
+
+}
+.logo{
+
+    width: 100%;
+    text-align: center;
+    position: static;
+    padding-top: 13vw;
+    padding-bottom: 9.5vw;
+}
+
+.logo img{
+    display:inline-block;
+    width: 23vw;
+}
+/* INPUT & BUTTON*/
+input {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 6vw;
+    text-align: right;
+    padding-right: 5vw;
+}
+input:focus {
+   outline: 0.6vw solid hsl(172, 67%, 45%);
+}
+button {
+    cursor:pointer;
+}
+/* WRAPPER KALKULATORA */
+.calculator-wrapper{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 6.6vw;
+    padding: 7.6vw;
+    padding-top: 9vw
+}
+/* INPUT LABEL */
+#heading {
+    font-size: 4.4vw;
+    margin-bottom: 1.2vw;
+    color: hsl(186, 14%, 43%);
+
+}
+/* WRAPPER DO INPUT BILL, HEADING + INPUT */
+.bill-input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+/* INPUT BILL*/
+#bill {
+height: 12vw;
+border: none;
+color: hsl(183, 100%, 15%);
+text-align: right;
+font-size: 6vw;
+font-family: 'Space Mono', monospace;
+border-radius: 1vw;
+background: url(images/icon-dollar.svg) no-repeat scroll 5vw 5vw;
+background-size: 3vw;
+background-position: 5vw;
+background-color:hsl(189, 41%, 97%);
+margin-bottom: 10vw;
+}
+/* WRAPPER W SELECT */
+.select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    position:relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3.8vw;
+    margin-bottom: 8vw;
+}
+/* HEADING */
+#tip-heading {
+    font-size: 4.4vw;
+    margin-bottom: 3vw;
+    color: hsl(186, 14%, 43%);
+}
+/* PRZYCISKI W SELECT */
+
+.select-wrapper button {
+    background-color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+    color: white;
+    font-size: 6vw;
+    width: 39vw;
+    border-radius: 1vw;
+    border: none;
+    height: 13vw;
+    margin: 0.2vw
+}
+
+/* INPUT CUSTOM */
+#custom {
+    width: 39vw;
+    height: 13vw;
+    border-radius: 2vw;
+    border:none;
+    background-color:hsl(189, 41%, 97%);
+}
+/*INPUT NO of PEOPLE */
+#nopeople {
+    height: 12vw;
+    width: 100%;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+    font-size: 6vw;
+    font-family: 'Space Mono', monospace;
+    border-radius: 1vw;
+    background: url(images/icon-person.svg) no-repeat scroll 5vw 5vw;
+    background-size: 3vw;
+    background-position: 5vw;
+    background-color:hsl(189, 41%, 97%);
+    margin-top: 2vw;
+    margin-bottom: 10vw;
+    }
+/* WRAPPER DO SEKCJI WYNIKOW */
+.result-wrapper {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    height: 53vw;
+    border-radius: 3vw;
+    padding: 5vw;
+    padding-top: 10vw;
+}
+/* WRAPPER DO OPISU I CENY */
+.tip-amount-wrap, .total-wrap {
+    display:flex;
+    justify-content: space-between;
+}
+.tip-amount-wrap {
+    margin-bottom: 5vw;
+}
+/* p & / person */
+.tip-amount-wrap span, .total-wrap span {
+    font-size: 3.5vw;
+    color: hsl(186, 14%, 43%);
+}
+.tip-text p, .total-text p{
+    font-size: 4.4vw;
+}
+/* PRZYCISK RESET*/
+.result-wrapper button {
+    background-color: hsl(172, 67%, 45%);
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    font-size: 5vw;
+    width: 100%;
+    border-radius: 1vw;
+    border: none;
+    height: 13vw;
+    margin-top: 9.2vw;
+}
+/* WYNIKI TIP & TOTAL */
+.tip-result, .total-result {
+    color: hsl(172, 67%, 45%);
+    font-size: 8vw;
+}

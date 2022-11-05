@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo"><img src="images/logo.svg" /></div>
+    <div class="calculator-wrapper">
+      <div class="flex-wrapper-inputs">
+        <section class="bill-input-wrapper">
+          <label for="bill" id="heading">Bill</label>
+          <input type="tel" name="bill" id="bill" maxlength="6" />
+        </section>
+
+        <section class="tip-button-wrapper">
+          <p id="tip-heading">Select Tip %</p>
+          <div class="select-wrapper">
+            <button class="five">5%</button>
+            <button class="ten">10%</button>
+            <button class="fifteen">15%</button>
+            <button class="twentyfive">25%</button>
+            <button class="fifty">50%</button>
+            <input
+              type="tel"
+              maxlength="3"
+              name="custom"
+              id="custom"
+              placeholder="Custom"
+            />
+          </div>
+        </section>
+
+        <section class="peoplenumber-wrapper">
+          <label for="nopeople" id="heading">Number of People</label>
+          <input type="tel" name="nopeople" id="nopeople" maxlength="3" />
+        </section>
+      </div>
+      <div class="flex-wrapper-results">
+        <section class="result-wrapper">
+          <div class="tip-amount-wrap">
+            <div class="tip-text">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <p class="tip-result">$0.00</p>
+          </div>
+          <div class="total-wrap">
+            <div class="total-text">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <p class="total-result">$0.00</p>
+          </div>
+          <button class="reset" onClick="window.location.href=window.location.href">RESET</button>
+        </section>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="cleave.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
