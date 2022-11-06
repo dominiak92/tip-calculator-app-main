@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [LIVE SITE](https://your-live-site-url.com)
+- Live Site URL: [LIVE SITE](https://dominiak92.github.io/tip-calculator-app-main/)
 
 ## My process
 
