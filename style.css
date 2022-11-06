@@ -40,7 +40,7 @@ input {
     padding-right: 5vw;
 }
 input:focus {
-   outline: 0.6vw solid hsl(172, 67%, 45%);
+   outline: 0.2vw solid hsl(172, 67%, 45%);
 }
 button {
     cursor:pointer;
@@ -94,7 +94,7 @@ margin-bottom: 10vw;
     margin-bottom: 3vw;
     color: hsl(186, 14%, 43%);
 }
-/* PRZYCISKI W SELECT */
+/* PRZYCISKI W SELECT - GRID */
 .five { grid-area: 1 / 1 / 2 / 2; }
 .ten { grid-area: 1 / 2 / 2 / 3; }
 .fifteen { grid-area: 2 / 1 / 3 / 2; }
@@ -137,8 +137,18 @@ margin-bottom: 10vw;
     background-position: 5vw;
     background-color:hsl(189, 41%, 97%);
     margin-top: 2vw;
-    margin-bottom: 10vw;
     }
+/* ERROR DO INPUT NO of PEOPLE */
+.error-nopeople {
+    display:none;
+}
+.error-nopeople.active {
+    display:block;
+    position:absolute;
+    color: red;
+    text-align: right;
+    font-size: 4.4vw;
+}
 /* WRAPPER DO SEKCJI WYNIKOW */
 .result-wrapper {
     background-color: hsl(183, 100%, 15%);
@@ -147,6 +157,7 @@ margin-bottom: 10vw;
     border-radius: 3vw;
     padding: 5vw;
     padding-top: 10vw;
+    margin-top: 10vw;
 }
 /* WRAPPER DO OPISU I CENY */
 .tip-amount-wrap, .total-wrap {
@@ -181,3 +192,188 @@ margin-bottom: 10vw;
     color: hsl(172, 67%, 45%);
     font-size: 8vw;
 }
+
+
+/* MEDIA QUERIES DLA URZADZEN 992px + */
+
+
+
+@media (min-width: 992px) {
+    body {
+        font-weight: 700;
+        background-color: #c5e4e7;
+        transform: translateY(-18%);
+    
+    }
+    .logo{
+        transform: translateY(+10%);
+        width: 100%;
+        text-align: center;
+        position: static;
+        padding-top: 11.4vw;
+        padding-bottom: 5.7vw;
+    }
+    
+    .logo img{
+        display:inline-block;
+        width: 6vw;
+    }
+    /* INPUT & BUTTON*/
+    input {
+        box-sizing: border-box;
+        font-size: 1.8vw;
+        text-align: right;
+        padding-right: 1vw;
+    }
+    input:focus {
+       outline: 0.2vw solid hsl(172, 67%, 45%);
+    }
+    button {
+        cursor:pointer;
+    }
+    /* WRAPPER KALKULATORA */
+    .calculator-wrapper{
+        box-sizing: border-box;
+        display: flex;
+        width: 64vw;
+        height: 33.3vw;
+        margin: 0 auto;
+        border-radius: 2vw;
+        padding: 3.4vw;
+        padding-top: 2vw;
+        -webkit-box-shadow: 0px 0px 59px -33px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 59px -33px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 59px -33px rgba(0,0,0,0.75);
+    }
+    /* INPUT LABEL */
+    .bill-input-wrapper label {
+        margin-top: 1vw;
+    }
+    #heading {
+        font-size: 1.2vw;
+        margin-bottom: 0.4vw;
+        color: hsl(186, 14%, 43%);
+    
+    }
+    /* WRAPPER DO INPUT BILL, HEADING + INPUT */
+    .bill-input-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    /* INPUT BILL*/
+    #bill {
+    height: 3.2vw;
+    width: 26.4vw;
+    text-align: right;
+    font-size: 1.4vw;
+    font-family: 'Space Mono', monospace;
+    border-radius: 0.4vw;
+    background-size: 0.9vw;
+    background-position: 1.3vw;
+    margin-bottom: 3vw;
+    }
+    /* WRAPPER W SELECT */
+    .select-wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 1.1vw;
+        grid-row-gap: 1.2vw;
+        height: 9vw;
+        width: 28.7vw;
+    }
+    /* HEADING */
+    #tip-heading {
+        font-size: 1.1vw;
+        margin-bottom: 0.7vw;
+    }
+    /* PRZYCISKI W SELECT - GRID */
+    .five { grid-area: 1 / 1 / 2 / 2; }
+    .ten { grid-area: 1 / 2 / 2 / 3; }
+    .fifteen { grid-area: 1 / 3 / 2 / 4; }
+    .twentyfive { grid-area: 2 / 1 / 3 / 2; }
+    .fifty { grid-area: 2 / 2 / 3 / 3; }
+    #custom  { grid-area: 2 / 3 / 3 / 4; }
+    
+    .select-wrapper button {
+        font-size: 1.6vw;
+        width: 8vw;
+        border-radius: 0.5vw;
+        border: none;
+        height: 3.4vw;
+        margin: 0.0vw
+    }
+    
+    /* INPUT CUSTOM */
+    #custom {
+        width: 8vw;
+        height: 3.4vw;
+        border-radius: 0.5vw;
+    }
+    /*INPUT NO of PEOPLE */
+    .peoplenumber-wrapper {
+        display:flex;
+        flex-direction: column
+        ;}
+    .peoplenumber-wrapper label {
+        margin-top: 1.77vw;
+        letter-spacing: -0.02vw;
+    }
+    #nopeople {
+        height: 3.2vw;
+        width: 26.4vw;
+        text-align: right;
+        font-size: 1.4vw;
+        border-radius: 0.4vw;
+        background-size: 0.9vw;
+        background-position: 1.3vw;
+        margin-top: 0vw;
+        }
+    /* ERROR DO INPUT NO of PEOPLE */
+    .error-nopeople {
+        display:none;
+    }
+    .error-nopeople.active {
+        display:block;
+        position:static;
+        margin-right: 2vw;
+        text-align: right;
+        font-size: 1.4vw;
+    }
+    /* WRAPPER DO SEKCJI WYNIKOW */
+    .result-wrapper {
+        box-sizing: border-box;
+        height: 29.2vw;
+        width: 29vw;
+        border-radius: 1vw;
+        padding: 3vw;
+        margin-left: 0.8vw;
+        padding-top: 3vw;
+        margin-top: 0vw;
+    }
+    /* WRAPPER DO OPISU I CENY */
+    .tip-amount-wrap {
+        margin-bottom: 2vw;
+    }
+    /* p & / person */
+    .tip-amount-wrap span, .total-wrap span {
+        font-size: 0.9vw;
+    }
+    .tip-text p, .total-text p{
+        font-size: 1.1vw;
+    }
+    .tip-text, .total-text {
+        margin-top: 1.1vw;
+    }
+    /* PRZYCISK RESET*/
+    .result-wrapper button {
+        font-size: 1.4vw;
+        width: 100%;
+        border-radius: 0.5vw;
+        height: 3.3vw;
+        margin-top: 8.5vw;
+    }
+    /* WYNIKI TIP & TOTAL */
+    .tip-result, .total-result {
+        font-size: 3.2vw;
+}}

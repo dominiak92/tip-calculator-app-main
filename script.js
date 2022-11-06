@@ -31,6 +31,9 @@ const tipResult = document.querySelector('.tip-result');
 /*WYNIK TOTAL */
 const totalResult = document.querySelector('.total-result');
 
+/* ERROR No Of People */
+const errorpeople = document.querySelector('.error-nopeople')
+
 /* CONTAINER NA WYNIK */
 let result = [];
 /* CONTAINER NA TIP */
@@ -101,7 +104,7 @@ custom.oninput = () =>{
     fifteen.disabled = true;
     twentyfive.disabled = true;
     fifty.disabled = true;
-    }
+}
 
 noOfPeople.oninput = () => {
     const numberOfPeople = parseInt(noOfPeople.value)
@@ -110,7 +113,13 @@ noOfPeople.oninput = () => {
     let tipPerPerson = tip / numberOfPeople
     totalResult.innerText = '$' + (totalPerPerson).toFixed(1)
     tipResult.innerText = '$' + (tipPerPerson).toFixed(1)
-
+    if (numberOfPeople === 0 || numberOfPeople < 0){
+    noOfPeople.style.outline = "0.2vw solid red"
+    errorpeople.classList.add('active');
+    return false;
+    } else {noOfPeople.style.outline = "0.2vw solid hsl(172, 67%, 45%)";
+    errorpeople.classList.remove('active');
+    return true;}
 }
 
 five.addEventListener('click', addFive)
