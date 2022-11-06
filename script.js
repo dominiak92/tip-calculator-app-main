@@ -26,10 +26,10 @@ const fifty = document.querySelector(".fifty");
 const reset = document.querySelector('.reset');
 
 /* WYNIK TIPu */
-const tipResult = document.querySelector('.tip-result');
+let tipResult = document.querySelector('.tip-result');
 
 /*WYNIK TOTAL */
-const totalResult = document.querySelector('.total-result');
+let totalResult = document.querySelector('.total-result');
 
 /* ERROR No Of People */
 const errorpeople = document.querySelector('.error-nopeople')
@@ -41,7 +41,7 @@ let tip = [];
 
 
 
-
+//DODAWANIE WARTOSCI
 addValue = (buttonName, percent) => {
     buttonName.style.backgroundColor = "hsl(172, 67%, 45%)"
     let percentToGet = percent;
@@ -50,6 +50,7 @@ addValue = (buttonName, percent) => {
     result = amount + percentOfValue;
     tip = percentOfValue;
     custom.disabled = true;
+
 }
 
 addFive = () => {
@@ -92,7 +93,7 @@ addFifty = () => {
     twentyfive.disabled = true;
     
 }
-
+// INPUT LICZBY PROCENTOW
 custom.oninput = () =>{
     let percentToGet = parseInt(custom.value);
     const amount = parseInt(bill.value) 
@@ -105,7 +106,7 @@ custom.oninput = () =>{
     twentyfive.disabled = true;
     fifty.disabled = true;
 }
-
+// INPUT LICZBY OSOB
 noOfPeople.oninput = () => {
     const numberOfPeople = parseInt(noOfPeople.value)
     const fullAmount = result;
@@ -113,13 +114,17 @@ noOfPeople.oninput = () => {
     let tipPerPerson = tip / numberOfPeople
     totalResult.innerText = '$' + (totalPerPerson).toFixed(1)
     tipResult.innerText = '$' + (tipPerPerson).toFixed(1)
-    if (numberOfPeople === 0 || numberOfPeople < 0){
+    if (tipResult.innerText === "$NaN" || totalResult.innerText === "$NaN" || totalResult.innerText === "$Infinity" || tipResult.innerText === "$Infinity") {
+        tipResult.innerText = "error!";
+        totalResult.innerText = "error!";
     noOfPeople.style.outline = "0.2vw solid red"
     errorpeople.classList.add('active');
     return false;
     } else {noOfPeople.style.outline = "0.2vw solid hsl(172, 67%, 45%)";
     errorpeople.classList.remove('active');
     return true;}
+    
+
 }
 
 five.addEventListener('click', addFive)
