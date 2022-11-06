@@ -16,6 +16,8 @@ body {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     background-color: #c5e4e7;
+    min-height: 100vh;
+    
 
 }
 .logo{
